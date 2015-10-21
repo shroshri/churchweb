@@ -1,0 +1,67 @@
+﻿@model MvcChurchsj.Models.Newstable
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Newstable</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nid)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nid)
+            @Html.ValidationMessageFor(model => model.Nid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nhead)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nhead)
+            @Html.ValidationMessageFor(model => model.Nhead)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Ndate)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Ndate, new { Value = string.Format("{0:yyyy - dd MMMM, hh:mm tt}", DateTime.Now) })
+
+            @Html.ValidationMessageFor(model => model.Ndate)
+        </div>
+
+        <div class="editor-label">
+            <input type="file" name="file" />
+            @Html.ValidationMessageFor(model => model.NUrl)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Ntext)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Ntext)
+            @Html.ValidationMessageFor(model => model.Ntext)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

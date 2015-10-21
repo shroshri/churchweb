@@ -1,0 +1,40 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IPagedList<MvcChurchsj.Models.Evtable>
+
+@{
+    ViewBag.Title = "Elisting";
+}
+
+<h2>Elisting</h2>
+
+
+
+@foreach (var item in Model) {
+    <div class="newsborder">
+        <div class="display-field newstitles">
+            @Html.DisplayFor(modelItem => item.etitle)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(modelItem => item.edate)
+        </div>
+        <div class="media histalignn">
+            <div class="display-field">
+                @* @Html.DisplayFor(model => item.Ntext)
+                    @item.Ntext.Substring(0, 100) @Html.ActionLink("Read More", "Ndetail", new { id = item.Nid })
+                    @Html.DisplayFor(modelItem => modelItem.FirstName).ToString().Substring(0,5)*@
+                @Html.Raw((item.etext.Length > 200 ? item.etext.Substring(0, 200) : item.etext))
+                @Html.ActionLink("Read More", "Edetail", new { id = item.eid })
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+}
+
+<div class="pagedList">
+    @Html.PagedListPager(Model, page => Url.Action("Elisting", new { page }), PagedListRenderOptions.PageNumbersOnly)
+</div>

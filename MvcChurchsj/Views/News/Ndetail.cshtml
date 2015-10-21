@@ -1,0 +1,34 @@
+﻿@model MvcChurchsj.Models.Newstable
+
+@{
+    ViewBag.Title = "Ndetail";
+}
+
+<div class="headingm"><h3>@ViewBag.Title</h3></div>
+<div class="newsborder">
+    <div class="display-field newstitles">
+        @Html.DisplayFor(model => model.Nhead)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ndate)
+    </div>
+
+    <div class="media histalignn">
+
+        <div class="pull-left histimgn">
+
+            <a href="#">
+                <img style="width:320px;" src="@Url.Content(Model.NUrl)" class="media-object histimginn" />
+            </a>
+        </div>
+
+
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Ntext)
+        </div>
+
+
+    </div>
+</div>
+
+

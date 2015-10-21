@@ -1,0 +1,60 @@
+﻿@model MvcChurchsj.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+<div class="headingm"><h3>@ViewBag.Title</h3></div>
+
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Registration Form</legend>
+        <table>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.UserName)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.UserName)
+                </td>
+            </tr>
+            <tr><td>  &nbsp; &nbsp;   </td>  </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Password)
+                </td>
+                <td>
+                    @Html.PasswordFor(m => m.Password)
+                </td>
+            </tr>
+            <tr><td>  &nbsp; &nbsp;   </td>  </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.ConfirmPassword)
+                </td>
+                <td>
+                    @Html.PasswordFor(m => m.ConfirmPassword)
+                </td>
+            </tr>
+            <tr><td>  &nbsp; &nbsp;   </td>  </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" value="Register" />
+                </td>
+            </tr>
+
+        </table>
+
+
+
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,56 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IPagedList<MvcChurchsj.Models.Pdtable>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            pid
+        </th>
+        <th>
+           pname
+        </th>
+        <th>
+            pdate
+        </th>
+        <th>
+            pdfdoc
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.pid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pdfdoc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.pid}) |
+            @Html.ActionLink("Details", "Details", new { id=item.pid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.pid })
+        </td>
+    </tr>
+}
+
+</table>
+<div class="pagedList">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), PagedListRenderOptions.PageNumbersOnly)
+</div>

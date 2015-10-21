@@ -1,0 +1,62 @@
+﻿@model MvcChurchsj.Models.Pdtable
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Edit", "pdf", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Pdtable</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.pid)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.pid)
+            @Html.ValidationMessageFor(model => model.pid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.pname)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.pname)
+            @Html.ValidationMessageFor(model => model.pname)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.pdate)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.pdate, new { Value = string.Format("{0:yyyy - dd MMMM, hh:mm tt}", DateTime.Now) })
+            @Html.ValidationMessageFor(model => model.pdate)
+        </div>
+
+        <div class="editor-label">
+            Select CV
+        </div>
+        <div class="editor-field">
+            <input type="file" name="file" />
+            @Html.ValidationMessage("CustomError")
+        </div>
+
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

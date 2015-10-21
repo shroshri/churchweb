@@ -1,0 +1,60 @@
+﻿@model MvcChurchsj.Models.Evtable
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Evtable</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.eid)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.eid)
+            @Html.ValidationMessageFor(model => model.eid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.etitle)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.etitle)
+            @Html.ValidationMessageFor(model => model.etitle)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.edate)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.edate, new { Value = string.Format("{0:yyyy - dd MMMM, hh:mm tt}", DateTime.Now) })
+            @Html.ValidationMessageFor(model => model.edate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.etext)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.etext)
+            @Html.ValidationMessageFor(model => model.etext)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

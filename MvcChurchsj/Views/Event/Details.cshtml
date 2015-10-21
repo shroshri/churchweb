@@ -1,0 +1,43 @@
+﻿@model MvcChurchsj.Models.Evtable
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Evtable</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.eid)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.eid)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.etitle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.etitle)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.edate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.edate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.etext)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.etext)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.eid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

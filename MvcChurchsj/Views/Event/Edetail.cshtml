@@ -1,0 +1,24 @@
+﻿@model MvcChurchsj.Models.Evtable
+
+@{
+    ViewBag.Title = "Edetail";
+}
+
+<div class="headingm"><h3>@ViewBag.Title</h3></div>
+<div class="newsborder">
+    <div class="display-field newstitles">
+        @Html.DisplayFor(model => model.etitle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.edate)
+    </div>
+
+    <div class="media histalignn">
+        <div class="display-field">
+            @Html.DisplayFor(model => model.etext)
+        </div>
+
+
+    </div>
+</div>
+

@@ -1,0 +1,186 @@
+﻿body {
+    background-color:#D8B18B;
+}
+.headmain {
+margin-bottom:15px;
+}
+/*-------------------------------------------navbar----------------------------------------------*/
+.navmain {
+margin-bottom:-6px;
+}
+.navbar { 
+background:#F2C1A4;
+border-color:#F2C1A4;
+font-size:medium;
+
+}
+.navbar-default .navbar-nav > li > a{
+    color:#0E3A07;
+}
+.searchcolor {
+color:#0E3A07;
+background:#F2C1A4;
+border-color:#F2C1A4;
+}
+
+/*-------------------------------------------login----------------------------------------------*/
+.loginf {
+        margin: 0;
+        text-align:right; 
+        padding-top:10px;
+    }
+/*-------------------------------------------ContentMainAll----------------------------------------------*/ 
+.headingm
+        {
+     margin-left:10px;
+     padding-bottom: 20px;
+    
+        } 
+.contactleft {
+   
+    left:15px;
+    padding-left:-15px;
+        }
+.cmap {
+    width:370px;
+    height:400px;
+        }
+.subheadcleft {
+padding-bottom:5px;
+}
+.activit {
+padding-left:25px;
+        }
+.newsborder {
+    border: 1px thin #646464;
+    padding: 10px;
+    background-color: #E9E9E9;
+}
+.subsubtitle {
+padding-top:15px;
+
+}
+.aboutcont {
+margin-left:-10px;
+}
+.mylink {
+    background: url("../Cimage/wwa2.jpg") round ; 
+    display: block; 
+    height: 100px; 
+    width: 240px;
+    
+}
+.mylink1 {
+    background: url("../Cimage/our-history.jpg") round ; 
+    display: block; 
+    height: 100px; 
+    width: 240px;
+    
+}
+.mylink2 {
+    background: url("../Cimage/Service_times.jpg") round ; 
+    display: block; 
+    height: 100px; 
+    width: 240px;
+    
+}
+.histalign {
+/*text-indent: 50px;*/
+text-align:justify;
+}
+.histimg {
+     margin-right:15px;
+     padding-top:10px;
+     padding-bottom:5px;
+}
+.histimgin {
+height:200px;
+width:200px;
+}
+/*----------------------------Home Content-------------------------------*/
+.homejumb {
+background-color:#F2C1A4;
+box-shadow: 5px 5px 5px #FFEAD5;
+
+}
+.hjumbtitle {
+font-size: 35px;
+font-family:'Cambria Math';
+padding-bottom:18px;
+/*text-shadow: 1px 1px 1px #000000;*/
+color:#993300;
+
+}
+.mylinkh1 {
+    background: url("../Cimage/Service_times.jpg") round ; 
+    display: block; 
+    height: 200px; 
+    width: 230px;
+    
+}
+.mylinkh2 {
+    background: url("../Cimage/newsimg.jpg") round ; 
+    display: block; 
+    height: 200px; 
+    width: 230px;
+    
+}
+.mylinkh3 {
+    background: url("../Cimage/Upevents.jpg") round ; 
+    display: block; 
+    height: 200px; 
+    width: 230px;
+    
+}
+.mylinkh4 {
+    background: url("../Cimage/newsletterig.jpg") round ; 
+    display: block; 
+    height: 200px; 
+    width: 230px;
+    
+}
+.mylinkh5 {
+    background: url("../Cimage/activityig.jpg") round ; 
+    display: block; 
+    height: 200px; 
+    width: 230px;
+    
+}
+.mylinkh6 {
+    background: url("../Cimage/gallimg.jpg") round ; 
+    display: block; 
+    height: 200px; 
+    width: 230px;
+    
+}
+.homecol {
+padding-top:10px;
+padding-bottom:10px;
+
+
+}
+
+/*----------------------------------News/Event---------------------------------*/
+.eventside {
+border-left:1px solid black;
+}
+.newstitles{
+    font-size:large;
+}
+.histalignn {
+/*text-indent: 50px;*/
+text-align:justify;
+}
+.histimgn {
+     /*margin-right:15px;*/
+     padding-bottom:5px;
+     margin-top:-15px;
+}
+.histimginn {
+height:260px;
+
+}
+.histimginnn {
+height:100px;
+
+}

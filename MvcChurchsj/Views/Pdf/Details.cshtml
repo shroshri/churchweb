@@ -1,0 +1,46 @@
+﻿@model MvcChurchsj.Models.Pdtable
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Pdtable</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pid)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pid)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pdate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pdate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pdfdoc)
+    </div>
+    <div class="display-field">
+        <a href="@Url.Content(Model.pdfdoc)" target="_blank">
+            Download
+        </a>
+
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id=Model.pid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

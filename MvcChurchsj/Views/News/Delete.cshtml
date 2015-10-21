@@ -1,0 +1,54 @@
+﻿@model MvcChurchsj.Models.Newstable
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Newstable</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nid)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nid)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nhead)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nhead)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ndate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ndate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NUrl)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NUrl)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ntext)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ntext)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

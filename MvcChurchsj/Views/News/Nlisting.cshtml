@@ -1,0 +1,50 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IPagedList<MvcChurchsj.Models.Newstable>
+
+
+@{
+    ViewBag.Title = "Nlisting";
+}
+
+<h2>Nlisting</h2>
+
+@foreach (var item in Model) 
+     {
+
+        <div class="newsborder">
+            <div class="display-field newstitles">
+                @Html.DisplayFor(modelItem => item.Nhead)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(modelItem => item.Ndate)
+            </div>
+            <div class="media histalignn">
+
+                <div class="pull-left histimgn">
+
+                    <a href="#">
+                        <img style="width:150px;" src="@Url.Content(item.NUrl)" class="media-object histimginnn" />
+                    </a>
+                </div>
+
+
+                <div class="display-field">
+                    @* @Html.DisplayFor(model => item.Ntext)
+                        @item.Ntext.Substring(0, 100) @Html.ActionLink("Read More", "Ndetail", new { id = item.Nid })
+                        @Html.DisplayFor(modelItem => modelItem.FirstName).ToString().Substring(0,5)*@
+                    @Html.Raw((item.Ntext.Length > 200 ? item.Ntext.Substring(0, 200) : item.Ntext))
+                    @Html.ActionLink("Read More", "Ndetail", new { id = item.Nid })
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+}
+<div class="pagedList">
+    @Html.PagedListPager(Model, page => Url.Action("Nlisting", new { page }), PagedListRenderOptions.PageNumbersOnly)
+</div>

@@ -1,0 +1,48 @@
+﻿@model MvcChurchsj.Models.Newstable
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Newstable</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nid)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nid)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nhead)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nhead)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ndate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ndate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NUrl)
+    </div>
+    <img style="width:50px;" src="@Url.Content(Model.NUrl)" />
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ntext)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ntext)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Nid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
